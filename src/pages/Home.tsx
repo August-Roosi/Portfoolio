@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import roosiProfiil from './../assets/roosi-profiil.jpg';
-import { BiLinkExternal } from 'react-icons/bi';
+
+// Icons
+import { BiLinkExternal, BiLogoReact } from 'react-icons/bi';
+import { BiLogoPython } from 'react-icons/bi';
+import { BiLogoDjango } from 'react-icons/bi';
+
 
 const Home: React.FC = () => {
     return (
@@ -13,7 +18,7 @@ const Home: React.FC = () => {
         [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-in-out [&>*]:hover:scale-110'>
             
             {/* Tutvustus */}
-            <div className='grow-2 flex'>
+            <div className='grow-2 flex basis-160'>
                 <h1 className='self-center m-auto'>August Roosi <br /><b className='text-[4rem]'>portfoolio</b></h1>
             </div>
 
@@ -22,12 +27,8 @@ const Home: React.FC = () => {
             style={{ backgroundImage: `url(${roosiProfiil})` }}
             ></div>
 
-
-
-            <div className='grow-2'>React, Vue, Svelte, Django</div>
-
             {/* Haridus */}
-            <div className='flex-col basis-80 grow-3 grap-10 [&>*]:p-2 [&>*]:text-left'>
+            <div className='flex flex-col justify-center basis-80 grow-3 grap-10 [&>*]:p-2 [&>*]:text-left '>
                 <div><b>Tartu Ülikool</b> <br /> 
                 <div> <span className='text-purple-500'>Doktoriõpe</span>, ?? 
                 <br /> ?? - ?? </div> 
@@ -42,9 +43,22 @@ const Home: React.FC = () => {
             </div>
 
 
+            {/* Tehnoloogiad */}
+            <div className='grow-2 p-2'>
+                <div className='text-left text-[2rem] p-4'>
+                    Tehnoloogiad millega ennast väga mugavalt tunnen:
+                </div>
+                <div className='flex m-auto h-2/4 [&>*]:m-auto gap-5 [&>*]:flex [&>*]:no-wrap [&>*]:items-center [&>*]:font-bold'>
+                    <div>React <BiLogoReact size={44} className='stroke-1' /></div>
+                    <div>Django <BiLogoDjango size={44} /></div>
+                    <div>Python <BiLogoPython size={44} /></div>
+                </div>
+            </div>
+
+
             {/* Vihku */}
-            <Link target='_blank' className='group overflow-auto grow-3 flex justify-center' to={"https://www.vihku.ee"}> 
-                <h1 className='self-center px-9 text-black underline'><span>VIH</span><span className='text-cyan-700'>KU</span></h1>
+            <Link id='vihku' target='_blank' className='group basis-80 overflow-auto grow-4 flex justify-center' to={"https://www.vihku.ee"}> 
+                <h1 className='self-center px-8 text-black underline'><span>VIH</span><span className='text-cyan-700'>KU</span></h1>
                 <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-gray-100/80  text-black p-4 transition-all duration-300 ease-in-out  '>
                     <p>Olen osa meeskonnast, kellega asutasime firma tasuta vihikute jagamiseks gümnaasiumites. </p>
                     <p>Selle
@@ -55,11 +69,30 @@ const Home: React.FC = () => {
 
                     <p className='bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#wordpress</p>
 
-                    <BiLinkExternal className='opacity-100 text-black absolute right-5 bottom-5' size={40}></BiLinkExternal>
+                    <BiLinkExternal className='opacity-100 text-black absolute right-3 bottom-3' size={40}></BiLinkExternal>
                 </div>
             </Link>
 
-            <Link to={"/about-me"}>Lahedat minust veel</Link>
+            {/* ArgPuu */}
+            <Link id='argpuu' target='_blank' className='group basis-80 overflow-auto grow-4 flex justify-center' to={"https://www.argpuu.ee"}> 
+                <h1 className='self-center px-8 text-black'>ArgPuu</h1>
+                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-gray-100/80  text-black p-4 transition-all duration-300 ease-in-out  '>
+                    <p>Tegin enda 2025 bakalaureuse lõputööks veebirakenduse, kus saab luua argumentatsioonipuid.</p>
+                    <p>Projektis kasutan Djangot koos React-iga ning PostgreSQL andmebaasis.</p>
+                    <p>Lehe serveerimiseks kasutasin Heroku serveriteenust.</p>
+
+                    <div className='flex flex-wrap gap-2'>
+                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#django</p>
+                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#sql</p>
+                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#react</p>
+                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#heroku</p>
+
+                    </div>
+
+                    <BiLinkExternal className='opacity-100 text-black absolute right-3 bottom-3' size={40}></BiLinkExternal>
+                </div>
+            </Link>
+
         </main>
     );
 };

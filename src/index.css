@@ -24,12 +24,40 @@ html::-webkit-scrollbar {
 
 /* Hide scrollbar for Firefox */
 html, body {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 /* Ensure it can still scroll */
 html, body {
-  overflow: auto; /* or overflow-x/overflow-y */
+  overflow: auto; 
+}
+
+
+/* Works in Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;       
+  height: 8px;      
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;  
+  border-radius: 9999px;    
+  border: 2px solid transparent; 
+  background-clip: content-box;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;   
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
 }
 
 a {
