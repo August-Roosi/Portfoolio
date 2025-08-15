@@ -13,8 +13,8 @@ function PageWrapper({ children }: PageWrapperProps) {
 
   const variants = {
     enter: (dir: number) => ({
-      x:  1000 * dir,
-      opacity: 1
+      x:  2000 * dir,
+      opacity: direction == 0 ? 0 : 1,
     }),
     center: {
       x: 0,
@@ -39,7 +39,7 @@ function PageWrapper({ children }: PageWrapperProps) {
       initial="enter"
       animate="center"
       exit="exit"
-      transition={{ duration: direction == 0 ? 0.5 : 0.3, ease: "easeInOut" }}
+      transition={{ duration: direction == 0 ? 0.5 : 0.3, ease: "easeOut" }}
       className="absolute top-10 left-1/8 w-3/4"
       >
         {children}
