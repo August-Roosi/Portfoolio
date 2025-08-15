@@ -17,6 +17,21 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Hide scrollbar for Chrome, Safari, and Edge */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html, body {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ensure it can still scroll */
+html, body {
+  overflow: auto; /* or overflow-x/overflow-y */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
