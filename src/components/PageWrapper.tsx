@@ -22,7 +22,7 @@ function PageWrapper({ children }: PageWrapperProps) {
     },
     exit: (dir: number) => ({
       x: -2000 * dir,
-      transition: { duration: directionChanged ? 0.8 : 0.5 },
+      transition: { duration: directionChanged ? 0.7 : 0.6 },
       opacity: 1,
     })
   };
