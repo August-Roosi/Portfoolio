@@ -13,7 +13,7 @@ const Home: React.FC = () => {
  
 
         <main 
-        className=' relative runded-3xl z-[100] mb-10 p-6 flex flex-wrap gap-3 border-2 rounded-lg
+        className='relative runded-3xl z-[100] mb-10 p-6 flex flex-wrap gap-3 border-2 rounded-lg
         [&>*]:border-2 [&>*]:border-black [&>*]:min-w-30 [&>*]:min-h-60 [&>*]:p-4 [&>*]:bg-gray-100 [&>*]:rounded-lg
         [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-in-out [&>*]:hover:scale-110'>
             
