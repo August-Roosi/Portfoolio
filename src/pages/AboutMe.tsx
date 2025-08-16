@@ -1,16 +1,14 @@
 import React from 'react';
 
 
-// Pictures
+// Images
 import roosiChilli from './../assets/EFF-2019-3.jpg';
 import roosiWalksMono from './../assets/EFF-2023-1.jpg';
 import roosiWalks from './../assets/EFF-2023-2.jpg';
 import roosiClaps from './../assets/EFF-2025-3.jpg';
 import roosiOogaBooga from './../assets/EFF-2025-4.jpg';
 import roosiPunnitab from './../assets/roosi-punnitab.jpg';
-import roosiTaimed1 from './../assets/taimed-1.jpg';
 import roosiTaimed5 from './../assets/taimed-5.jpg';
-
 
 
 // Icons
