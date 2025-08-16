@@ -1,4 +1,5 @@
-"use client";
+// Code adapted from: React Bits (https://www.reactbits.dev/components/dock)
+
 
 
 import {

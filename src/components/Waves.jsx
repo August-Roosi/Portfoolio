@@ -1,3 +1,6 @@
+// Code adapted from: React Bits (https://www.reactbits.dev/components/waves)
+
+
 import { useRef, useEffect } from "react";
 
 class Grad {

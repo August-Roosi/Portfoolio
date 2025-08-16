@@ -1,4 +1,4 @@
-"use client";
+// Code adapted from: React Bits (https://www.reactbits.dev/components/text-type)
 
 import { useEffect, useRef, useState, createElement } from "react";
 import { gsap } from "gsap";
