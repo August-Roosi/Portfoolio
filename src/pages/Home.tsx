@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import roosiProfiil from './../assets/roosi-profiil.jpg';
 
 // Icons
 import { BiLinkExternal, BiLogoReact } from 'react-icons/bi';
 import { BiLogoPython } from 'react-icons/bi';
 import { BiLogoDjango } from 'react-icons/bi';
+
+// Images
+import roosiProfiil from './../assets/roosi-profiil.jpg';
+import portfoolioLogo from './../../public/portfoolio-logo.png';
 
 
 const Home: React.FC = () => {
@@ -67,9 +70,22 @@ const Home: React.FC = () => {
                     Wordpressi ning Worpressi staatilised failid majutasin Githubpagesiga. Lisaks olin kogu disaini ning
                     piltide töötlemise ja loomise taga.</p>
 
-                    <p className='bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#wordpress</p>
 
-                    <BiLinkExternal className='opacity-100 text-black absolute right-3 bottom-3' size={40}></BiLinkExternal>
+
+
+                    <div className='flex items-center'>
+
+                        <div className='flex w-full flex-wrap gap-2'>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#wordpress</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#git</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#kliendid</p>
+
+
+                        </div>
+
+                        <BiLinkExternal className='opacity-100 text-black' size={26}></BiLinkExternal>
+                    
+                    </div>
                 </div>
             </Link>
 
@@ -81,15 +97,45 @@ const Home: React.FC = () => {
                     <p>Projektis kasutan Djangot koos React-iga ning PostgreSQL andmebaasis.</p>
                     <p>Lehe serveerimiseks kasutasin Heroku serveriteenust.</p>
 
-                    <div className='flex flex-wrap gap-2'>
-                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#django</p>
-                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#sql</p>
-                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#react</p>
-                        <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#heroku</p>
+    
+                    <div className='flex items-center'>
 
+                        <div className='flex w-full flex-wrap gap-2'>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#django</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#postgresql</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#react</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#typescript</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#heroku</p>
+                        </div>
+
+                        <BiLinkExternal className='opacity-100 text-black' size={26}></BiLinkExternal>
+                    
                     </div>
 
-                    <BiLinkExternal className='opacity-100 text-black absolute right-3 bottom-3' size={40}></BiLinkExternal>
+                </div>
+            </Link>
+
+            {/* Portfoolio */}
+            <Link id='portfoolio' target='_blank' className='group basis-80 overflow-auto grow-4 flex justify-center' to={"https://www.augustroosi.ee"}> 
+                <div className='bg-cover h-25 w-25 self-center'  
+                style={{ backgroundImage: `url(${portfoolioLogo})` }}
+                ></div>
+                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-gray-100/80  text-black p-4 transition-all duration-300 ease-in-out  '>
+                    <p>Tegin 2025 suvel endale portfoolio lehe, kus on näha kõiki mu projekte ning muud minuga seotud infot.</p>
+                    <p>Lisaks tahtsin, et projekt näitaks, minu mugavust front-end arendusega.</p>
+
+                    <div className='flex items-center'>
+
+                        <div className='flex w-full flex-wrap gap-2'>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#react</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#typescript</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#git</p>
+                        </div>
+
+                        <BiLinkExternal className='opacity-100 text-black' size={26}></BiLinkExternal>
+                    
+                    </div>
+
                 </div>
             </Link>
 
