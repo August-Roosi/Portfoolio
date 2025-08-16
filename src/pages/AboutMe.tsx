@@ -1,12 +1,23 @@
 import React from 'react';
+
+
+// Pictures
 import roosiChilli from './../assets/EFF-2019-3.jpg';
 import roosiWalksMono from './../assets/EFF-2023-1.jpg';
 import roosiWalks from './../assets/EFF-2023-2.jpg';
 import roosiClaps from './../assets/EFF-2025-3.jpg';
 import roosiOogaBooga from './../assets/EFF-2025-4.jpg';
+import roosiPunnitab from './../assets/roosi-punnitab.jpg';
+import roosiTaimed1 from './../assets/taimed-1.jpg';
+import roosiTaimed5 from './../assets/taimed-5.jpg';
 
 
 
+// Icons
+import { GiWeight } from 'react-icons/gi';
+
+
+// Components
 import TextType from '../components/TextType';
 import DayCounter from '../components/DayCounter';
 
@@ -94,6 +105,58 @@ const AboutMe: React.FC = () => {
                     aastat
                 </div>
             </div>
+
+
+
+            <div className='grow-3 items-center text-[2rem] text-[1.3rem] justify-center px-2 w-20 flex gap-3 text-left w-full'>
+                <div className='flex flex-col'>
+
+                    <div>
+                        Rinnalt surumine: 130kg
+                        
+                    </div>
+                    <div>
+                        Kükk: 120kg
+                    </div>
+                    <div>
+                        Lõuatõmme: 30kg
+                    </div>
+
+                </div>
+                <GiWeight size={124}/>
+            </div>
+
+            <div className='grow-2 bg-cover h-140 w-50'  
+                style={{ backgroundImage: `url(${roosiPunnitab})` }}
+            ></div>
+
+            <div className='grow-3 text-[2rem] basis-180 text-[1.3rem] justify-center px-2 w-20 flex flex-col gap-3 text-left w-80'>
+                <div>
+                    Jõusaalis on tähtis <b>üks</b> ainuke reegel, milleks on järjepidevus.
+                </div>
+            </div>
+            <div className='p-0! grow-5 text-[2rem] text-[1.3rem] justify-center flex flex-col gap-3 text-left basis-120'>
+                <div className='text-center'>
+                    Mul on judos kollane vöö
+                </div>
+                <div className='bg-yellow-300 w-full p-0 h-10'></div>
+            </div>
+
+            <div className='grow-1 flex h-100 justify-center'>
+                <video autoPlay loop muted playsInline>
+                <source src="./../src/assets/roosi-judo.mp4" type="video/mp4" />
+                </video>
+            </div>
+
+            <div className=' grow-3 text-[2rem] text-[1.3rem] justify-center flex flex-col gap-3 text-left'>
+                Võtsin eelmine aasta osa oma esimesest judo võistlusest, kus kaotasin mõlemad matšid.
+            </div>
+            
+        
+            <div className='grow-5 basis-150 bg-cover h-120 w-80'  
+            style={{ backgroundImage: `url(${roosiTaimed5})` }}
+            ></div>
+
         </main>
     );
 };
