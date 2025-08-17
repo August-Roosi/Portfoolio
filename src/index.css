@@ -17,6 +17,49 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Hide scrollbar for Chrome, Safari, and Edge */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html, body {
+  scrollbar-width: none; 
+}
+
+/* Ensure it can still scroll */
+html, body {
+  overflow: auto; 
+}
+
+
+/* Works in Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;       
+  height: 8px;      
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;  
+  border-radius: 9999px;    
+  border: 2px solid transparent; 
+  background-clip: content-box;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;   
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

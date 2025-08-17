@@ -1,5 +1,23 @@
 import React from 'react';
-import roosiTulnukas from './../assets/roosi-tulnukas.jpeg';
+
+
+// Images
+import roosiChilli from './../assets/EFF-2019-3.jpg';
+import roosiWalksMono from './../assets/EFF-2023-1.jpg';
+import roosiWalks from './../assets/EFF-2023-2.jpg';
+import roosiClaps from './../assets/EFF-2025-3.jpg';
+import roosiOogaBooga from './../assets/EFF-2025-4.jpg';
+import roosiPunnitab from './../assets/roosi-punnitab.jpg';
+import roosiTaimed5 from './../assets/taimed-5.jpg';
+
+
+// Icons
+import { GiWeight } from 'react-icons/gi';
+
+
+// Components
+import TextType from '../components/TextType';
+import DayCounter from '../components/DayCounter';
 
 
 const AboutMe: React.FC = () => {
@@ -7,34 +25,135 @@ const AboutMe: React.FC = () => {
  
 
         <main 
-        className=' relative runded-3xl z-[100] p-6 flex flex-wrap gap-3 border-2 rounded-lg
+        className='mb-10 relative runded-3xl z-[100] p-6 flex flex-wrap gap-3 border-2 rounded-lg
         [&>*]:border-2 [&>*]:border-black [&>*]:min-w-30 [&>*]:min-h-60 [&>*]:p-4 [&>*]:bg-gray-100 [&>*]:rounded-lg
         [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-in-out [&>*]:hover:scale-110'>
             
             {/* Vabatahtlik */}
+            <div className='grow-2 basis-120 flex'>
+                <h1 className='self-center m-auto'> 
+                    <span className='text-[5rem] '>
+                         Ma olen 
+                    </span> 
+                    <br />
+                    <b className='text-[4rem]'>
+                        <TextType 
+                        text={["Vabatahtlik", "Sportlane", "Botaanik"]}
+                        typingSpeed={75}
+                        pauseDuration={1500}
+                        showCursor={true}
+                        cursorCharacter="|"
+                        variableSpeed={false}
+                        onSentenceComplete={() => {}}
+                        />
+                    </b>
+                </h1>
+            </div>
+
+            <div className='grow-1 bg-cover h-90 flex basis-80'  
+            style={{ backgroundImage: `url(${roosiChilli})` }}
+            ></div>
+
+            {/* Aastaid moeetendustel */}
+            <div className='grow-1 flex'>
+                <div className='m-auto text-[2rem] flex gap-2'>Ma olen käinud moeetendustel
+                    <div className='text-[2rem] px-2 text-white bg-gray-500 rounded-lg'>
+                        <DayCounter startDate="2019-05-16" />
+                    </div>
+                    aastat
+                </div>
+            </div>
+
+
+
+            <div className='grow-2 bg-cover h-120 w-80'  
+            style={{ backgroundImage: `url(${roosiOogaBooga})` }}
+            ></div>
+
+
+            <div className='grow-2 bg-cover h-120 w-80'  
+            style={{ backgroundImage: `url(${roosiWalks})` }}
+            ></div>
+
+            <div className='grow-3 text-[1.3rem] justify-center px-2 w-20 flex flex-col gap-3 text-left w-80'>
+                <div>
+                    Modellinduses on kõik väga omanäolised ning kogu mõte on nendega koostööd teha, et anda inimestele show.
+                </div>
+                <div>
+                    Otsustavaks osaks on alati enda mugavtsoonist ja normaalsusest väljumine, et olla teistsugune, isegi, et imelik, kõik, et sulanduda enda karakterisse.
+                </div>
+            </div>
+
+            <div className='grow-1 bg-cover h-120 w-80'  
+            style={{ backgroundImage: `url(${roosiWalksMono})` }}
+            ></div>
+            <div className='grow-1 bg-cover h-120 w-180'  
+            style={{ backgroundImage: `url(${roosiClaps})` }}
+            ></div>
+
+
+
+
+            {/* Aastaid sportlane */}
             <div className='grow-2 flex'>
-                <h1 className='self-center m-auto'>Ma olen <br /><b className='text-[4rem]'>Vabatahtlik</b></h1>
+                <div className='m-auto text-[2rem] flex gap-2'>Ma olen käinud jõusaalis
+                    <div className='text-[2rem] px-2 text-white bg-gray-500 rounded-lg'>
+                        <DayCounter startDate="2018-08-16" />
+                    </div>
+                    aastat
+                </div>
             </div>
 
-            <div className='grow-1 bg-cover h-90 flex basis-80'  
-            style={{ backgroundImage: `url(${roosiTulnukas})` }}
-            ></div>
 
 
-            <div className='grow-2'>React, Vue, Svelte, Django</div>
+            <div className='grow-3 items-center text-[2rem] text-[1.3rem] justify-center px-2 w-20 flex gap-3 text-left w-full'>
+                <div className='flex flex-col'>
 
-            {/* Sportlane */}
-            <div className='grow-2 flex w-full'>
-                <h1 className='self-center m-auto'>Ma olen <br /><b className='text-[4rem]'>Sportlane</b></h1>
+                    <div>
+                        Rinnalt surumine: 130kg
+                        
+                    </div>
+                    <div>
+                        Kükk: 120kg
+                    </div>
+                    <div>
+                        Lõuatõmme: 30kg
+                    </div>
+
+                </div>
+                <GiWeight size={124}/>
             </div>
 
-            <div className='grow-1 bg-cover h-90 flex basis-80'  
-            style={{ backgroundImage: `url(${roosiTulnukas})` }}
+            <div className='grow-2 bg-cover h-140 w-50'  
+                style={{ backgroundImage: `url(${roosiPunnitab})` }}
             ></div>
 
+            <div className='grow-3 text-[2rem] basis-180 text-[1.3rem] justify-center px-2 w-20 flex flex-col gap-3 text-left w-80'>
+                <div>
+                    Jõusaalis on tähtis <b>üks</b> ainuke reegel, milleks on järjepidevus.
+                </div>
+            </div>
+            <div className='p-0! grow-5 text-[2rem] text-[1.3rem] justify-center flex flex-col gap-3 text-left basis-120'>
+                <div className='text-center'>
+                    Mul on judos kollane vöö
+                </div>
+                <div className='bg-yellow-300 w-full p-0 h-10'></div>
+            </div>
 
-            <div className='grow-2'>React, Vue, Svelte, Django</div>
+            <div className='grow-1 flex h-100 justify-center'>
+                <video autoPlay loop muted playsInline>
+                <source src="./../src/assets/roosi-judo.mp4" type="video/mp4" />
+                </video>
+            </div>
 
+            <div className=' grow-3 text-[2rem] text-[1.3rem] justify-center flex flex-col gap-3 text-left'>
+                Võtsin eelmine aasta osa oma esimesest judo võistlusest, kus kaotasin mõlemad matšid.
+            </div>
+            
+        
+            <div className='grow-5 basis-150 bg-cover h-120 w-80'  
+            style={{ backgroundImage: `url(${roosiTaimed5})` }}
+            ></div>
 
         </main>
     );

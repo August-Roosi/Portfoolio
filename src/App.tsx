@@ -9,8 +9,8 @@ import AboutMe from './pages/AboutMe.js';
 import Error from './pages/Error.js';
 
 // Components
-import Waves from './components/waves.jsx';
-import Dock from './components/dock.jsx';
+import Waves from './components/Waves.jsx';
+import Dock from './components/Dock.jsx';
 import PageWrapper from './components/PageWrapper.js';
 
 // Icons
@@ -73,7 +73,7 @@ function App() {
 
   return (
     <>
-    <div className='overflow-hidden'>
+    <div className=''>
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname} >
           <Route path="/" element={<PageWrapper> <Home /> </PageWrapper>} />
@@ -104,8 +104,8 @@ function App() {
         friction={0.9}
         tension={0.03}
         maxCursorMove={120}
-        xGap={32}
-        yGap={50}
+        xGap={132}
+        yGap={20}
         className='z-50'
         />
     </>
