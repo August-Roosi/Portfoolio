@@ -104,8 +104,8 @@ function App() {
         friction={0.9}
         tension={0.03}
         maxCursorMove={120}
-        xGap={32}
-        yGap={50}
+        xGap={132}
+        yGap={20}
         className='z-50'
         />
     </>
