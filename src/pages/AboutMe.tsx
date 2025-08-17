@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-// Images
+// Images and videos
 import roosiChilli from './../assets/EFF-2019-3.jpg';
 import roosiWalksMono from './../assets/EFF-2023-1.jpg';
 import roosiWalks from './../assets/EFF-2023-2.jpg';
@@ -9,6 +9,7 @@ import roosiClaps from './../assets/EFF-2025-3.jpg';
 import roosiOogaBooga from './../assets/EFF-2025-4.jpg';
 import roosiPunnitab from './../assets/roosi-punnitab.jpg';
 import roosiTaimed5 from './../assets/taimed-5.jpg';
+import roosiJudo from '../assets/roosi-judo.mp4';
 
 
 // Icons
@@ -142,7 +143,7 @@ const AboutMe: React.FC = () => {
 
             <div className='grow-1 flex h-100 justify-center'>
                 <video autoPlay loop muted playsInline>
-                <source src="./../src/assets/roosi-judo.mp4" type="video/mp4" />
+                <source src={roosiJudo} type="video/mp4" />
                 </video>
             </div>
 
