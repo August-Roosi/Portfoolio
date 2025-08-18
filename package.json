@@ -1,13 +1,15 @@
 {
   "name": "portfoolio",
   "private": true,
+  "homepage": "https://augustroosi.ee/#",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "cp dist/index.html dist/404.html"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",

@@ -18,6 +18,7 @@ import { BiHomeAlt } from 'react-icons/bi';
 import { BiSolidContact } from 'react-icons/bi';
 import { BsPersonWalking } from 'react-icons/bs';
 import { AnimatePresence } from 'motion/react';
+import { useEffect } from 'react';
 
 
 function App() {
@@ -38,10 +39,14 @@ function App() {
     if (toIndex > fromIndex) direction = 1;  // forward
     if (toIndex < fromIndex) direction = -1; // backward
 
-    console.log(direction)
     setDirection(direction);
     return direction;
   }
+
+  useEffect(() => {
+    setTo(location.pathname)
+  }, []); 
+
 
   function navigateWrapper(to: string) {
     if (isNavigating) return; 
