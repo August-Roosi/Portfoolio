@@ -15,7 +15,8 @@ function PageWrapper({ children }: PageWrapperProps) {
     function scrollToTop() {
       animate(window.scrollY, 0, {
         type: "spring",
-        damping: 20,
+        damping: 50,
+        stiffness: 200,
         onUpdate: (latest) => window.scrollTo(0, latest),
       });
     }
@@ -41,19 +42,17 @@ function PageWrapper({ children }: PageWrapperProps) {
       <motion.div
       ref={pageRef}
       onAnimationStart={() => {
-        setIsNavigating(true);
+        setIsNavigating(true)
         scrollToTop();
       }}
-      onAnimationComplete={() => {
-        setIsNavigating(false);
-      }}
+      onAnimationComplete={()=>setIsNavigating(false)}
 
       variants={variants}
       custom={direction}
       initial="enter"
       animate="center"
       exit="exit"
-      transition={ direction == 0 ?{duration: 0.5} :{type:"spring", damping: 40, ease: "easeIn"}}
+      transition={ direction == 0 ?{duration: 0.5} :{type:"spring", damping: 40, stiffness:400, ease: "easeOut"}}
       className="absolute top-10 left-1/8 w-3/4 z-100"
       >
         {children}
