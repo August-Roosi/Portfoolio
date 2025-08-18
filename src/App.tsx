@@ -94,7 +94,7 @@ function App() {
 
         <Waves
         lineColor="rgba(119, 66, 66, 1)"
-        backgroundColor="rgba(255, 255, 255, 0.2)"
+        backgroundColor="rgba(255, 255, 255, 0)"
         waveSpeedX={0.002}
         waveSpeedY={-0.05}
         waveAmpX={34}
@@ -104,7 +104,6 @@ function App() {
         maxCursorMove={120}
         xGap={132}
         yGap={20}
-        className='z-50'
         />
     </>
   )

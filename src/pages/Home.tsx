@@ -16,8 +16,11 @@ const Home: React.FC = () => {
  
 
         <main 
-        className='relative runded-3xl z-[100] mb-10 p-6 flex flex-wrap gap-3 border-2 rounded-lg
-        [&>*]:border-2 [&>*]:border-black [&>*]:min-w-30 [&>*]:min-h-60 [&>*]:p-4 [&>*]:bg-gray-100 [&>*]:rounded-lg
+        className='relative runded-3xl z-[100] mb-10 p-6 flex flex-wrap gap-3
+         border-2 rounded-lg dark:border-zinc-600
+        [&>*]:rounded-lg [&>*]:min-w-30 [&>*]:min-h-60 [&>*]:p-4
+        [&>*]:border-2 [&>*]:border-black [&>*]:bg-gray-100
+        [&>*]:dark:border-zinc-600 [&>*]:dark:bg-zinc-800 
         [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-in-out [&>*]:hover:scale-110'>
             
             {/* Tutvustus */}
@@ -60,9 +63,11 @@ const Home: React.FC = () => {
 
 
             {/* Vihku */}
-            <Link id='vihku' target='_blank' className='group basis-80 overflow-auto grow-4 flex justify-center' to={"https://www.vihku.ee"}> 
-                <h1 className='self-center px-8 text-black underline'><span>VIH</span><span className='text-cyan-700'>KU</span></h1>
-                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-gray-100/80  text-black p-4 transition-all duration-300 ease-in-out  '>
+            <Link id='vihku' target='_blank' className='group basis-80 overflow-x-auto grow-4 flex justify-center' to={"https://www.vihku.ee"}> 
+                <h1 className='self-center px-8 text-black dark:text-white underline'><span>VIH</span><span className='text-cyan-700 dark:text-cyan-500'>KU</span></h1>
+                <div className='rounded-lg self-center absolute top-5 p-4 flex-col invisible opacity-0
+                [&>*]:p-2 text-left group-hover:visible group-hover:opacity-100
+                bg-gray-100/80 dark:bg-zinc-800/80 dark:text-white  text-black p-4 transition-all duration-300 ease-in-out  '>
                     <p>Olen osa meeskonnast, kellega asutasime firma tasuta vihikute jagamiseks gümnaasiumites. </p>
                     <p>Selle
                     jaoks lõime algelise veebilehe aastal 2023. </p>
@@ -83,16 +88,17 @@ const Home: React.FC = () => {
 
                         </div>
 
-                        <BiLinkExternal className='opacity-100 text-black' size={26}></BiLinkExternal>
+                        <BiLinkExternal className='opacity-100 text-black dark:text-white' size={26}></BiLinkExternal>
                     
                     </div>
                 </div>
             </Link>
 
             {/* ArgPuu */}
-            <Link id='argpuu' target='_blank' className='group basis-80 overflow-auto grow-4 flex justify-center' to={"https://www.argpuu.ee"}> 
-                <h1 className='self-center px-8 text-black'>ArgPuu</h1>
-                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-gray-100/80  text-black p-4 transition-all duration-300 ease-in-out  '>
+            <Link id='argpuu' target='_blank' className='group basis-80 overflow-x-auto grow-4 flex justify-center' to={"https://www.argpuu.ee"}> 
+                <h1 className='self-center px-8 text-black dark:text-white'>ArgPuu</h1>
+                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 
+                bg-gray-100/80 dark:bg-zinc-800/80 dark:text-white text-black p-4 transition-all duration-300 ease-in-out  '>
                     <p>Tegin enda 2025 bakalaureuse lõputööks veebirakenduse, kus saab luua argumentatsioonipuid.</p>
                     <p>Projektis kasutan Djangot koos React-iga ning PostgreSQL andmebaasis.</p>
                     <p>Lehe serveerimiseks kasutasin Heroku serveriteenust.</p>
@@ -108,7 +114,7 @@ const Home: React.FC = () => {
                             <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#heroku</p>
                         </div>
 
-                        <BiLinkExternal className='opacity-100 text-black' size={26}></BiLinkExternal>
+                        <BiLinkExternal className='opacity-100 text-black dark:text-white' size={26}></BiLinkExternal>
                     
                     </div>
 
@@ -116,11 +122,12 @@ const Home: React.FC = () => {
             </Link>
 
             {/* Portfoolio */}
-            <Link id='portfoolio' target='_blank' className='group basis-80 overflow-auto grow-4 flex justify-center' to={"https://www.augustroosi.ee"}> 
+            <Link id='portfoolio' target='_blank' className='group basis-80 overflow-x-auto grow-4 flex justify-center' to={"https://www.augustroosi.ee"}> 
                 <div className='bg-cover h-25 w-25 self-center'  
                 style={{ backgroundImage: `url(${portfoolioLogo})` }}
                 ></div>
-                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-gray-100/80  text-black p-4 transition-all duration-300 ease-in-out  '>
+                <div className='rounded-lg self-center absolute top-5 p-4 flex-col [&>*]:p-2 text-left invisible opacity-0 group-hover:visible group-hover:opacity-100 
+                bg-gray-100/80 dark:bg-zinc-800/80 text-black dark:text-white p-4 transition-all duration-300 ease-in-out  '>
                     <p>Tegin 2025 suvel endale portfoolio lehe, kus on näha kõiki mu projekte ning muud minuga seotud infot.</p>
                     <p>Lisaks tahtsin, et projekt näitaks, minu mugavust front-end arendusega.</p>
 
@@ -132,7 +139,7 @@ const Home: React.FC = () => {
                             <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#git</p>
                         </div>
 
-                        <BiLinkExternal className='opacity-100 text-black' size={26}></BiLinkExternal>
+                        <BiLinkExternal className='opacity-100 text-black dark:text-white' size={26}></BiLinkExternal>
                     
                     </div>
 
