@@ -18,11 +18,10 @@ export const useNavigationStore = create<NavigationState>((set) => ({
     isNavigating: false,
     setIsNavigating: (isNavigating: boolean) => {
         set({ isNavigating });
-
     },
 
 
-    to: location.pathname,
+    to: '/',
     from: '/',
     direction: 0,
     directionChanged: false,
