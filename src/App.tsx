@@ -73,8 +73,7 @@ function App() {
 
   return (
     <>
-    <div className=''>
-      <AnimatePresence mode='wait'>
+      <AnimatePresence>
         <Routes location={location} key={location.pathname} >
           <Route path="/" element={<PageWrapper> <Home /> </PageWrapper>} />
           <Route path="/about-me" element={<PageWrapper><AboutMe /></PageWrapper>} />
@@ -83,7 +82,6 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </AnimatePresence>
-    </div>
 
 
         <Dock 
@@ -96,7 +94,7 @@ function App() {
 
         <Waves
         lineColor="rgba(119, 66, 66, 1)"
-        backgroundColor="rgba(255, 255, 255, 0.2)"
+        backgroundColor="rgba(255, 255, 255, 0)"
         waveSpeedX={0.002}
         waveSpeedY={-0.05}
         waveAmpX={34}
@@ -106,7 +104,6 @@ function App() {
         maxCursorMove={120}
         xGap={132}
         yGap={20}
-        className='z-50'
         />
     </>
   )

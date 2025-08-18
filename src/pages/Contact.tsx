@@ -7,7 +7,8 @@ const Contact: React.FC = () => {
 
         <main 
          className='relative runded-3xl z-[100] mb-10 p-6 flex flex-wrap gap-3 border-2 rounded-lg
-        [&>*]:border-2 [&>*]:border-black [&>*]:min-w-30 [&>*]:min-h-60 [&>*]:p-4 [&>*]:bg-gray-100 [&>*]:rounded-lg
+        dark:border-zinc-600 [&>*]:border-2 [&>*]:border-black [&>*]:dark:border-zinc-600 [&>*]:min-w-30 [&>*]:min-h-60 [&>*]:p-4 
+        [&>*]:bg-gray-100 [&>*]:dark:bg-zinc-800 [&>*]:rounded-lg
         [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-in-out [&>*]:hover:scale-110'>
            
             <div className='grow-2 basis-full flex items-center'>
