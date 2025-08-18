@@ -33,7 +33,6 @@ function PageWrapper({ children }: PageWrapperProps) {
     },
     exit: (dir: number) => ({
       x: -1800 * dir,
-      transition: { ease: [0.5,0.8,0.4,0.4], duration: 0.8},
     })
   };
 
