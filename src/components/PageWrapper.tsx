@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { type ReactNode } from "react";
+import { animate, motion } from "framer-motion";
+import { useRef, type ReactNode} from "react";
 import { useNavigationStore } from "../navigationStore";
 
 type PageWrapperProps = {
@@ -9,38 +9,53 @@ type PageWrapperProps = {
 function PageWrapper({ children }: PageWrapperProps) {
   const direction = useNavigationStore((state) => state.direction);
   const setIsNavigating = useNavigationStore((state) => state.setIsNavigating);
-  const directionChanged = useNavigationStore((state) => state.directionChanged);
+  const pageRef = useRef<HTMLDivElement>(null);
+
+
+    function scrollToTop() {
+      animate(window.scrollY, 0, {
+        type: "spring",
+        damping: 20,
+        onUpdate: (latest) => window.scrollTo(0, latest),
+      });
+    }
+
 
   const variants = {
     enter: (dir: number) => ({
-      x:  2000 * dir,
-      opacity: direction == 0 ? 0 : 1,
+      x:  1800 * dir,
+      opacity: direction == 0 ? 0 : 0,
     }),
-    center: {
+    center:{
       x: 0,
+      y: 0,
       opacity: 1
     },
     exit: (dir: number) => ({
-      x: -2000 * dir,
-      transition: { duration: directionChanged ? 0.7 : 0.6 },
-      opacity: 1,
+      x: -1800 * dir,
+      transition: { ease: [0.5,0.8,0.4,0.4], duration: 0.8},
     })
   };
 
 
   return (
       <motion.div
-      onAnimationStart={() => setIsNavigating(true)}
-      onAnimationComplete={() => setIsNavigating(false)}
+      ref={pageRef}
+      onAnimationStart={() => {
+        setIsNavigating(true);
+        scrollToTop();
+      }}
+      onAnimationComplete={() => {
+        setIsNavigating(false);
+      }}
 
-      key={location.pathname}
       variants={variants}
       custom={direction}
       initial="enter"
       animate="center"
       exit="exit"
-      transition={{ duration: direction == 0 ? 0.5 : 0.3, ease: "easeOut" }}
-      className="absolute top-10 left-1/8 w-3/4"
+      transition={ direction == 0 ?{duration: 0.5} :{type:"spring", damping: 40, ease: "easeIn"}}
+      className="absolute top-10 left-1/8 w-3/4 z-100"
       >
         {children}
       </motion.div>

@@ -73,8 +73,7 @@ function App() {
 
   return (
     <>
-    <div className=''>
-      <AnimatePresence mode='wait'>
+      <AnimatePresence>
         <Routes location={location} key={location.pathname} >
           <Route path="/" element={<PageWrapper> <Home /> </PageWrapper>} />
           <Route path="/about-me" element={<PageWrapper><AboutMe /></PageWrapper>} />
@@ -83,7 +82,6 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </AnimatePresence>
-    </div>
 
 
         <Dock 
