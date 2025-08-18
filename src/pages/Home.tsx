@@ -82,9 +82,9 @@ const Home: React.FC = () => {
 
                         <div className='flex w-full flex-wrap gap-2'>
                             <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#wordpress</p>
+                            <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#figma</p>
                             <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#git</p>
                             <p className='p-2 bg-gray-500/20 w-fit rounded-lg text-[0.6rem]'>#kliendid</p>
-
 
                         </div>
 
